@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Banica_Luis_Lab2.Data;
 using Banica_Luis_Lab2.Models;
 
-namespace Banica_Luis_Lab2.Pages.Books
+namespace Banica_Luis_Lab2.Pages.Publishers
 {
     public class IndexModel : PageModel
     {
@@ -19,15 +19,13 @@ namespace Banica_Luis_Lab2.Pages.Books
             _context = context;
         }
 
-        public IList<Book> Book { get;set; } = default!;
+        public IList<Publisher> Publisher { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
-            if (_context.Book != null)
+            if (_context.Publisher != null)
             {
-                Book = await _context.Book.ToListAsync(); 
-                 .Include(b => b.Publisher)
-                    .ToListAsync();
+                Publisher = await _context.Publisher.ToListAsync();
             }
         }
     }
