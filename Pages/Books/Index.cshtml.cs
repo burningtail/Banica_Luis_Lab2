@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Banica_Luis_Lab2.Data;
-using Banica_Luis_Lab2.Models;
 
 namespace Banica_Luis_Lab2.Pages.Books
 {
