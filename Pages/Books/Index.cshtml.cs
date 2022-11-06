@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Banica_Luis_Lab2.Models;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using Banica_Luis_Lab2.Data;
 
 namespace Banica_Luis_Lab2.Pages.Books
 {
@@ -18,16 +13,14 @@ namespace Banica_Luis_Lab2.Pages.Books
             _context = context;
         }
 
-        public IList<Book> Book { get;set; } = default!;
+        public IList<Book> Book { get; set; } = default!;
 
         public async Task OnGetAsync()
         {
-            if (_context.Book != null)
-            {
-                Book = await _context.Book.ToListAsync(); 
+
+                Book = await _context.Book
                  .Include(b => b.Publisher)
                     .ToListAsync();
             }
         }
     }
-}

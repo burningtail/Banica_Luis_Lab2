@@ -17,5 +17,7 @@ namespace Banica_Luis_Lab2.Data
         public DbSet<Banica_Luis_Lab2.Models.Book> Book { get; set; } = default!;
 
         public DbSet<Banica_Luis_Lab2.Models.Publisher> Publisher { get; set; }
+
+        public DbSet<Banica_Luis_Lab2.Models.Category> Category { get; set; }
     }
 }
