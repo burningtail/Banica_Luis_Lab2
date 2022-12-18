@@ -20,7 +20,7 @@ namespace Banica_Luis_Lab2.Pages.Publishers
         }
 
         [BindProperty]
-      public Publisher Publisher { get; set; }
+        public Publisher Publisher { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -35,7 +35,7 @@ namespace Banica_Luis_Lab2.Pages.Publishers
             {
                 return NotFound();
             }
-            else 
+            else
             {
                 Publisher = publisher;
             }

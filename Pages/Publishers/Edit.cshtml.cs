@@ -30,7 +30,7 @@ namespace Banica_Luis_Lab2.Pages.Publishers
                 return NotFound();
             }
 
-            var publisher =  await _context.Publisher.FirstOrDefaultAsync(m => m.ID == id);
+            var publisher = await _context.Publisher.FirstOrDefaultAsync(m => m.ID == id);
             if (publisher == null)
             {
                 return NotFound();
@@ -71,7 +71,7 @@ namespace Banica_Luis_Lab2.Pages.Publishers
 
         private bool PublisherExists(int id)
         {
-          return _context.Publisher.Any(e => e.ID == id);
+            return _context.Publisher.Any(e => e.ID == id);
         }
     }
 }
